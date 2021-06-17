@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProductMeta xmlns="http://www.nsoas.org.cn/">
+  <SatelliteID>HY-2B</SatelliteID>
+  <SensorID>SCA</SensorID>
+  <ProductArea>GLOBAL</ProductArea>
+  <ProductName>H2B_OPER_SCA_L2B_OR_20210426T200703_20210426T215126_12546_pwp_250_07_owv</ProductName>
+  <FileName>H2B_OPER_SCA_L2B_OR_20210426T200703_20210426T215126_12546_pwp_250_07_owv.jpg</FileName>
+  <ProductUnit>PIESAT</ProductUnit>
+  <ContactInfo>dts@nsoas.org.cn</ContactInfo>
+  <SatelliteInfo>
+    <OrbitFlag>FUL</OrbitFlag>
+  </SatelliteInfo>
+  <ProductInfo>
+    <ProductLevel>L4</ProductLevel>
+    <SubjectType>SSR</SubjectType>
+    <FactorType>SSW</FactorType>
+    <StatisticsType></StatisticsType>
+    <ProductFormat>JPEG</ProductFormat>
+    <ProductVersion>10</ProductVersion>
+    <ProductDescription>HY-2B SCA LEVEL L4 SSW Product</ProductDescription>
+    <SoftwareName>hy2_sca_ssw_ssr</SoftwareName>
+    <SoftwareVersion>10</SoftwareVersion>
+    <ProduceTime>2021-04-27T07:16:59</ProduceTime>
+    <SpatialResolution></SpatialResolution>
+  </ProductInfo>
+  <CorrectionParams>
+    <ProjectType>WGS_84</ProjectType>
+  </CorrectionParams>
+  <ImageInfo>
+    <StartTime>2021-04-26T20:07:03</StartTime>
+    <EndTime>2021-04-26T21:51:26</EndTime>
+    <DataSize>1.03</DataSize>
+    <DataUnit>MB</DataUnit>
+  </ImageInfo>
+  <ImportList>
+    <Satellite></Satellite>
+  </ImportList>
+</ProductMeta>
