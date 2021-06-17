@@ -14,6 +14,7 @@ The directory structure of this project looks like this:
 ├── src                 <- Source of the codes
 │   ├── make_littler           <- Making LITTLER format files
 │   ├── read_hy2b              <- Reading wind speed and wind direction from a HY-2B L2B h5 file.
+│   ├── utils                  <- Utils for the project.
 │
 ├── data                    <- Project data
 │	├── hy2b           			<- Folder to save input HY-2B files
@@ -46,7 +47,7 @@ conda activate myenv
 pip install -r requirements.txt
 ```
 
-When running `python run.py` you should see something like this:
+When running `python run.py --input_folder ./data/hy2b --output_folder ./data/littler --log_path ./logs/run.log` you should see something like this:
 
 ```
 2021-06-17 20:02:35,132 - convert2littler - INFO - Start logging!

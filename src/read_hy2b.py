@@ -7,7 +7,7 @@
 import h5py
 import numpy as np
 import pandas as pd
-
+from .utils import check_leap_year, num2month
 
 def read_hy2b(file_path):
     """
@@ -33,7 +33,18 @@ def read_hy2b(file_path):
         lon[i] = lon[i]
     dates = np.array(f['wvc_row_time']).flatten()
     date = dates[len(dates) // 2]
-    date = (date[:8] + date[9:11]).decode()
+    month_day = check_leap_year(int(date[:4]))
+    if int(date[12:14]) > 30:
+        if int(date[9:11]) < 23:
+            date = date[:8].decode() + str(int(date[9:11])+1)
+        else:
+            if int(date[6:8]) < month_day[num2month(int(date[4:6]))]:
+                date = date[:6].decode() + str(int(date[6:8])+1) + '00'
+            else:
+                date = date[:4].decode() + '{:02d}'.format(int(date[4:6])+1) + '0100'
+    else:
+        date = date[:8].decode() + date[9:11].decode()
+
     wind_speed = np.array(f['wind_speed_selection'][:]).astype(np.float).flatten()
     for i in range(len(wind_speed)):
         wind_speed[i] = wind_speed[i] * 0.01
