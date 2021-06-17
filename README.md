@@ -1,9 +1,5 @@
 # convert2littler
 
-## Table of Contents
-
-[TOC]
-
 ## 📌&nbsp;&nbsp;Introduction
 
 This project is used to convert some other format observation data into LITTLER format file to prepare for WRFDA.
