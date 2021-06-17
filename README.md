@@ -53,11 +53,11 @@ When running `python run.py --input_folder ./data/hy2b --output_folder ./data/li
 2021-06-17 20:02:35,132 - convert2littler - INFO - Start logging!
 2021-06-17 20:02:35,132 - convert2littler - INFO - Start searching qscat files
 2021-06-17 20:02:35,134 - convert2littler - INFO - Qscat file paths are ready!
-2021-06-17 20:02:35,255 - convert2littler - INFO - Makeing output folder for test_data/hdf5/H2B_OPER_SCA_L2B_OR_20210426T200703_20210
+2021-06-17 20:02:35,255 - convert2littler - INFO - Makeing output folder for ./data/hy2b/H2B_OPER_SCA_L2B_OR_20210426T200703_20210
 426T215126_12546_pwp_250_07_owv.h5
-2021-06-17 20:02:35,255 - convert2littler - INFO - Start converting data/hdf5/H2B_OPER_SCA_L2B_OR_20210426T200703_20210426T21512
+2021-06-17 20:02:35,255 - convert2littler - INFO - Start converting ./data/hdf5/H2B_OPER_SCA_L2B_OR_20210426T200703_20210426T21512
 6_12546_pwp_250_07_owv.h5 into ./data/littler/2021042620/obs.2021042620
-2021-06-17 20:21:08,660 - convert2littler - INFO - data/hdf5/H2B_OPER_SCA_L2B_OR_20210426T200703_20210426T215126_12546_pwp_250_0
+2021-06-17 20:21:08,660 - convert2littler - INFO - ./data/hy2b/H2B_OPER_SCA_L2B_OR_20210426T200703_20210426T215126_12546_pwp_250_0
 7_owv.h5's convertion is done.
 2021-06-17 20:21:08,666 - convert2littler - INFO - Converting done!
 ```
