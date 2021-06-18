@@ -1,5 +1,5 @@
 from src.read_hy2b import read_hy2b
-from src.make_littler import header_record, data_record, ending_record
+from src.make_littler import header_record, data_record, ending_record, tail_record
 import argparse
 import os
 import gc
@@ -51,15 +51,23 @@ def hy2b2littler(logger, input_file, output_folder):
         hr.write(file)
         del hr
         file.write('\n')
+
         dr = data_record(wind_speed=hy2b['wind_speed'][i],
                          wind_dir=hy2b['wind_dir'][i])
         dr.write(file)
         del dr
         file.write('\n')
+
         er = ending_record()
         er.write(file)
         del er
         file.write('\n')
+
+        tr = tail_record()
+        tr.write(file)
+        del tr
+        file.write('\n')
+
         gc.collect()
     file.close()
     logger.info(f"{input_file}'s convertion is done.")

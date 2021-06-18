@@ -249,3 +249,28 @@ class ending_record():
             :return: None
         """
         file.write(self.make_line())
+
+class tail_record():
+    """
+        This class is use to generate the tail record for littler format data
+    """
+    def __init__(self):
+        self.tail_1 = format(1, '7')
+        self.tail_2 = format(0, '7')
+        self.tail_3 = format(0, '7')
+
+    def make_line(self):
+        """
+        This function make one line of the ending record
+        :return: str
+        """
+        res = self.tail_1 + self.tail_2 + self.tail_3
+        return res
+
+    def write(self, file):
+        """
+            This function is used to write tail record to the littler file.
+            :param file: The output file which used for WRFDA obsproc module
+            :return: None
+        """
+        file.write(self.make_line())
