@@ -25,12 +25,9 @@ def read_hy2b(file_path):
     # print(f.filename, ":")
     # print([key for key in f.keys()], "\n")
     lat = np.array(f['wvc_lat'][:]).astype(np.float).flatten()
-    for i in range(len(lat)):
-        lat[i] = lat[i]
 
     lon = np.array(f['wvc_lon'][:]).astype(np.float).flatten()
-    for i in range(len(lon)):
-        lon[i] = lon[i]
+
     dates = np.array(f['wvc_row_time']).flatten()
     date = dates[len(dates) // 2]
     month_day = check_leap_year(int(date[:4]))

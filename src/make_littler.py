@@ -3,6 +3,7 @@
 #
 # Created by wuxinwang
 #
+import numpy as np
 
 class header_record():
     """
@@ -55,7 +56,11 @@ class header_record():
             precipitable_water: float = format(-888888, '13.5f'),
             precipitable_water_qc: int = format(0, '7'),
     ):
-        self.lat = format(lat, '20.5f')
+        if len('{:20.5f}'.format(lat)) > 20:
+            lat = np.float('{:20.5f}'.format(lat)[:14])
+        self.lat = '{:20.5f}'.format(lat)
+        if len('{:20.5f}'.format(lon)) > 20:
+            lon = np.float('{:20.5f}'.format(lat)[:14])
         self.lon = format(lon, '20.5f')
         self.id = id
         self.name = name
@@ -67,9 +72,9 @@ class header_record():
         self.num_warnings = num_warnings
         self.sequence_number = sequence_number
         self.num_duplicates = num_duplicates
-        self.is_sound = '      T'.ljust(10, ' ') if is_sound else '      F'.ljust(10, ' ')
-        self.is_bogus = '      T'.ljust(10, ' ') if is_bogus else '      F'.ljust(10, ' ')
-        self.discard = '      T'.ljust(10, ' ') if discard else '      F'.ljust(10, ' ')
+        self.is_sound = '     T'.ljust(10, ' ') if is_sound else '     F'.ljust(10, ' ')
+        self.is_bogus = '     T'.ljust(10, ' ') if is_bogus else '     F'.ljust(10, ' ')
+        self.discard = '     T'.ljust(10, ' ') if discard else '     F'.ljust(10, ' ')
         self.unix_time = unix_time
         self.julian_day = julian_day
         self.date = str(('      '+str(date)).ljust(20, '0'))
