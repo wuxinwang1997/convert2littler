@@ -15,7 +15,7 @@ class header_record():
             lon: float = -104.86000,
             id: str = '  station info'.ljust(40,' '),
             name: str = '  surface data from ascat'.ljust(40, ' '),
-            fm_code: str = 'FM-281 Quikscat',
+            fm_code: str = 'FM-281 Quikscat'.ljust(40,' '),
             source: str = 'write_by_wuxin'.ljust(40, ' '),
             elevation: float = format(10, '20.5f'),
             valid_fields: int = format(6*1, '10'),
