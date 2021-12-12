@@ -47,8 +47,8 @@ def read_hy2b(file_path):
     wind_dir = np.array(f['wind_dir_selection'][:]).astype(np.float).flatten()
     for i in range(len(wind_speed)):
         if wind_speed[i] == 0 or wind_speed[i] == -32767 or wind_dir[i] == -32767:
-            wind_speed[i] = -888888.,
-            wind_dir[i] = -888888.,
+            wind_speed[i] = -888888.
+            wind_dir[i] = -888888.
         else:
             wind_dir[i] = ((wind_dir[i]+1800)%3600) * 0.1
             wind_speed[i] = wind_speed[i] * 0.01
