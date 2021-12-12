@@ -3,6 +3,7 @@
 #
 # Created by wuxinwang
 #
+import numpy as np
 
 MONTH_DAY_0 = {
     'Jan': 31,
@@ -65,3 +66,18 @@ def check_leap_year(year):
         return MONTH_DAY_1
     else:
         return MONTH_DAY_0
+
+deg = 180.0/np.pi
+rad = np.pi/180.0
+
+def uv2sd(u, v):
+    # u, v to wspd, wdir
+    wspd = np.sqrt(u**2+v**2)
+    wdir =  180.0 + np.arctan2(u, v)*deg
+    return wspd, wdir
+
+def sd2uv(wspd, wdir):
+    # wspd, wdir to u, v
+    u = -wspd*np.sin(wdir*rad)
+    v = -wspd*np.cos(wdir*rad)
+    print('wspd =',wspd, ' wdir =',wdir, ' u =',u, ' v =',v)
